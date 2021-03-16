@@ -1,0 +1,85 @@
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+
+class Student{
+    private Integer studentNummer;
+    private String naam;
+
+    public void Student(Integer studentNummer){
+
+    }
+    public Integer getStudentNummer(){
+        return studentNummer;
+    }
+    public String getNaam(){
+        return naam;
+    }
+    public void validateStudentnummer(Integer studentNummer){
+
+    }
+}
+class Result{
+    private Integer correct;
+
+    public Boolean getResult(){
+        return true;
+    }
+}
+
+class Examen{
+    private String examenNaam;
+    private Integer maxQ;
+
+    public void Examen(String examenNaam){
+
+    }
+    public String getExamenNaam(){
+        return examenNaam;
+    }
+    public Integer getMaxQ(){
+        return maxQ;
+    }
+    public Question[] getQuestions(){
+
+    }
+    public Question[] getRandomQuestions(){
+
+    }
+    public void addQuestions(Question question){
+
+    }
+}
+
+class Questions{
+    private String question;
+    private Integer maxChoices;
+    private ArrayList<String> choices;
+    private Integer answer;
+
+    public void Question(String question, Integer maxChoices,  ArrayList<String> choices, Integer answer){
+
+    }
+    public String getQuestion(){
+        return question;
+    }
+    public ArrayList<String> getChoices(){
+        return choices;
+    }
+    public Integer getAnswer(){
+        return answer;
+    }
+
+    //???????
+    public Integer getAnswer(String[] randomKeuze){
+
+    }
+    //???????
+    public String[] getRandomChoices(){
+
+    }
+    public Boolean doQuestion(String[] randomChoice, Integer answer, Integer input){
+
+    }
+}
+
+class Menu{}
