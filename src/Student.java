@@ -3,6 +3,7 @@ class Student{
     private String naam;
 
     public void Student(Integer studentNummer){
+        this.studentNummer = studentNummer;
 
     }
     public Integer getStudentNummer(){
