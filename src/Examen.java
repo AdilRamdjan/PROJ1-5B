@@ -14,9 +14,11 @@ class Examen{
     public Integer getMaxQ(){
         return maxQ;
     }
-    public Question[] getQuestions(){
 
+    public ArrayList<String> getQuestion() {
+        return Question;
     }
+
     public Question[] getRandomQuestions(){
 
     }
