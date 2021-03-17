@@ -1,12 +1,16 @@
 import java.util.ArrayList;
 
-class Questions{
+class Question{
     private String question;
     private Integer maxChoices;
     private ArrayList<String> choices;
     private Integer answer;
 
     public void Question(String question, Integer maxChoices,  ArrayList<String> choices, Integer answer){
+        this.question = question;
+        this.maxChoices = maxChoices;
+        this.choices = choices;
+        this.answer = answer;
 
     }
     public String getQuestion(){
@@ -19,11 +23,11 @@ class Questions{
         return answer;
     }
 
-    //???????
-    public Integer getAnswer(String[] randomKeuze){
+
+    public Integer getAnswer(String[] randomChoices){
 
     }
-    //???????
+
     public String[] getRandomChoices(){
 
     }
