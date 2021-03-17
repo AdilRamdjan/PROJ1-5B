@@ -25,10 +25,11 @@ class Question{
 
 
     public Integer getAnswer(String[] randomChoices){
-
+        return answer;
     }
 
     public String[] getRandomChoices(){
+        return choices;
 
     }
     public Boolean doQuestion(String[] randomChoice, Integer answer, Integer input){
