@@ -34,4 +34,13 @@ class Question{
     public Boolean doQuestion(String[] randomChoice, Integer answer, Integer input){
 
     }
+
+    public String displayQuestion(String[] randomChoice, String question){
+        this.question = question;
+        return question;
+    }
+
+    public Boolean validateInput(String input){
+
+    }
 }
