@@ -3,6 +3,7 @@ class Examen{
     private Integer maxQ;
 
     public void Examen(String examenNaam){
+        this.examenNaam = examenNaam;
 
     }
     public String getExamenNaam(){
