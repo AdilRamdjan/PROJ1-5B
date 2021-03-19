@@ -37,7 +37,11 @@ class Question{
 
     public String displayQuestion(String[] randomChoice, String question){
         this.question = question;
-        return question;
+        String displayedQuestion = question;
+        for (int i = 0; i <= this.maxChoices; i++){
+            displayedQuestion += " Choice "+(i+1)+": " + randomChoice[i];
+        }
+        return displayedQuestion;
     }
 
     public Boolean validateInput(String input){
