@@ -30,7 +30,7 @@ class Question{
         return answer;
     }
 
-    public String[] getRandomChoices(){
+    public ArrayList<String> getRandomChoices(){
         return choices;
 
     }
@@ -40,8 +40,7 @@ class Question{
         Scanner scanner = new Scanner(System.in);
         input = scanner.nextInt();
     }
-<<<<<<< Updated upstream
-=======
+
 
     public String displayQuestion(String[] randomChoice){
         String displayedQuestion = question;
@@ -54,5 +53,5 @@ class Question{
     public Boolean validateInput(String input){
 
     }
->>>>>>> Stashed changes
+
 }
