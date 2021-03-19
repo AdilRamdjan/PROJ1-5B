@@ -39,7 +39,7 @@ class Question{
         this.question = question;
         String displayedQuestion = question;
         for (int i = 0; i <= this.maxChoices; i++){
-            displayedQuestion += " Choice "+(i+1)+": " + randomChoice[i];
+            displayedQuestion += "\n"+(i+1)+") " + randomChoice[i];
         }
         return displayedQuestion;
     }
