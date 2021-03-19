@@ -34,4 +34,17 @@ class Question{
     public Boolean doQuestion(String[] randomChoice, Integer answer, Integer input){
 
     }
+
+    public String displayQuestion(String[] randomChoice, String question){
+        this.question = question;
+        String displayedQuestion = question;
+        for (int i = 0; i <= this.maxChoices; i++){
+            displayedQuestion += "\n"+(i+1)+") " + randomChoice[i];
+        }
+        return displayedQuestion;
+    }
+
+    public Boolean validateInput(String input){
+
+    }
 }
