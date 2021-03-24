@@ -1,6 +1,7 @@
 class Student{
     private Integer studentNummer;
     private String naam;
+    Student hasResults;
 
     public void Student(Integer studentNummer){
         this.studentNummer = studentNummer;
