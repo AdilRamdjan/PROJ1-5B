@@ -42,9 +42,16 @@ class Question{
     }
 
 
+
     public String displayQuestion(String[] randomChoice){
         String displayedQuestion = question;
         for (int i = 0; i < this.maxChoices; i++){
+
+    public String displayQuestion(String[] randomChoice, String question){
+        this.question = question;
+        String displayedQuestion = question;
+        for (int i = 0; i <= this.maxChoices; i++){
+
             displayedQuestion += "\n"+(i+1)+") " + randomChoice[i];
         }
         return displayedQuestion;
@@ -53,5 +60,7 @@ class Question{
     public Boolean validateInput(String input){
 
     }
+
+
 
 }
