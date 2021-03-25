@@ -5,10 +5,7 @@ class Student{
 
     public void Student(Integer studentNummer){
         this.studentNummer = studentNummer;
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
     }
     public Integer getStudentNummer(){
         return studentNummer;
