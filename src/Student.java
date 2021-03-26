@@ -1,3 +1,5 @@
+import java.util.regex.Pattern;
+
 class Student{
     private Integer studentNummer;
     private String naam;
@@ -13,7 +15,7 @@ class Student{
     public String getNaam(){
         return naam;
     }
-    public void validateStudentnummer(Integer studentNummer){
-
+    public boolean validateStudentNumber(String studentNumber) {
+        return (Pattern.matches("[1-9][0-9]{7}",studentNumber));
     }
 }
