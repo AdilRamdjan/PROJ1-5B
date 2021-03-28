@@ -26,27 +26,30 @@ class Result{
     }
 }
 
-class Examen{
+class Examen {
     private String examenNaam;
-    private Integer maxQ;
+    private ArrayList<Question> questionList;
 
-    public void Examen(String examenNaam){
+    public void Examen(String examenNaam) {
+        this.examenNaam = examenNaam;
 
     }
-    public String getExamenNaam(){
+
+    public String getExamenNaam() {
+
         return examenNaam;
     }
-    public Integer getMaxQ(){
-        return maxQ;
-    }
-    public Question[] getQuestions(){
+
+
+    public Question[] getQuestions() {
+        return questionList;
 
     }
-    public Question[] getRandomQuestions(){
 
-    }
-    public void addQuestions(Question question){
-
+    public void addQuestions(question[]) {
+        for (int i = 0; i <= question.length; i++) {
+            this.questionList.add(question[i]);
+        }
     }
 }
 
