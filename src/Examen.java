@@ -1,28 +1,28 @@
 import java.util.ArrayList;
 
-class Examen{
+class Examen {
     private String examenNaam;
-    private Integer maxQ;
-    private ArrayList<String> Question = new ArrayList<String>();
+    private ArrayList<Question> questionList;
 
-    public void Examen(String examenNaam){
+    public Examen(String examenNaam) {
         this.examenNaam = examenNaam;
+        questionList = new ArrayList<Question>();
+
     }
-    public String getExamenNaam(){
+
+    public String getExamenNaam() {
+
         return examenNaam;
     }
-    public Integer getMaxQ(){
-        return maxQ;
+
+
+    public ArrayList<Question> getQuestions() {
+        return questionList;
     }
 
-    public ArrayList<String> getQuestion() {
-        return Question;
-    }
-
-    public Question[] getRandomQuestions(){
-
-    }
-    public void addQuestions(Question question){
-
+    public void addQuestions(Question[] question) {
+        for (int i = 0; i <= question.length; i++) {
+            this.questionList.add(question[i]);
+        }
     }
 }

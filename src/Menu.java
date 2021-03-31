@@ -1,4 +1,3 @@
-public class Menu {
-
-
+abstract class Menu {
+    public abstract void DisplayMenu(String input);
 }
