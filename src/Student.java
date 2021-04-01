@@ -1,18 +1,18 @@
 import java.util.regex.Pattern;
 
 class Student{
-    private Integer studentNummer;
+    private Integer studentNumber;
     private String naam;
     Student hasResults;
 
     public void Student(Integer studentNummer){
-        this.studentNummer = studentNummer;
+        this.studentNumber = studentNummer;
 
     }
-    public Integer getStudentNummer(){
-        return studentNummer;
+    public Integer getStudentNumber(){
+        return studentNumber;
     }
-    public String getNaam(){
+    public String getName(){
         return naam;
     }
     public boolean validateStudentNumber(String studentNumber) {
