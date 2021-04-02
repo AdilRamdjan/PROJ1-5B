@@ -29,7 +29,7 @@ public class menuStudent extends Menu {
         int i = 1;
         String result = "";
         for(Student student : hasStudents){
-            result += i + ") " + student.getName() + " " + student.getStudentNumber();
+            result += i + ") " + student.getName() + "\t " + student.getStudentNumber() + "\n";
             i++;
         }
         return result;
