@@ -6,22 +6,32 @@ class MenuExamen extends Menu{
         examList = new ArrayList<Examen>();
     }
 
-    public void DisplayMenu(String input) {
+    public void DisplayMenu() {
         System.out.println("1) Examens weergeven\n" + "2) Nieuw examen\n");
     }
     public ArrayList<Examen> getExamens(){
         return examList;
     }
     public String displayExams(){
+        int i = 1;
         String examens = "";
-        for (int i = 0; i >= getExamens().size(); i++){
-            examens += i + ") " + getExamens().get(i);
+        for (Examen examen : examList){
+            examens += i + ") " + examen.getExamenNaam() + "\n";
+            i++;
         }
         return examens;
     }
-    public boolean makeExam(Examen Exam, String input, Question[] questions){
-        Exam = new Examen(input);
-        Exam.addQuestions(questions);
-        return examList.add(Exam);
+    public boolean addExam(Examen examen){
+        if(examList.add(examen)){
+            return true;
+        }else{return false;}
     }
+
+
+
+   //public boolean makeExam(String examName, Question[] questions){
+   //     Examen exam = new Examen(examName);
+   //     exam.addQuestions(questions);
+   //     return examList.add(exam);
+   // }
 }

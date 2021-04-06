@@ -1,18 +1,21 @@
 import java.util.ArrayList;
 
 class Examen {
-    private String examenNaam;
+    private String examName;
     private ArrayList<Question> questionList;
 
-    public Examen(String examenNaam) {
-        this.examenNaam = examenNaam;
-        questionList = new ArrayList<Question>();
+    public Examen(String examName, ArrayList<Question> questionList) {
+        this.questionList = questionList;
+        this.examName = examName;
 
+    }
+    public Examen(){
+        questionList = new ArrayList<Question>();
     }
 
     public String getExamenNaam() {
 
-        return examenNaam;
+        return examName;
     }
 
 

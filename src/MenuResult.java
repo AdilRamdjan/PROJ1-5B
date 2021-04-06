@@ -1,24 +1,36 @@
+
 import java.util.ArrayList;
 
 class MenuResult extends Menu {
-    private ArrayList<Examen> examList;
-    private ArrayList<Examen> succesfullExamens;
-    public MenuResult(Examen[] Exam, Student student) {
-        super(Exam, student);
+    private ArrayList<Result> resultList;
+
+    public MenuResult(ArrayList<Result> results) {
+        this.resultList = results;
+    }
+    public MenuResult(){
+        this.resultList = new ArrayList<Result>();
+    }
+
+
+
+    public ArrayList<Examen> getPassedExams(Student student){
+        ArrayList<Examen> passedExamList = new ArrayList<Examen>();
+        for (Result result : resultList){
+            if (student.getStudentNumber().equals(result.getHasStudent().getStudentNumber())){
+                if (result.getResult()){
+                    passedExamList.add(result.getExam());
+                }
+            }
+        }
+        return passedExamList;
+    }
+
+    public boolean addResult(Result result){
+        return resultList.add(result);
     }
 
     public void DisplayMenu() {
-        for (int i = 0; i >= succesfullExamens.size(); i++){
-            System.out.println(succesfullExamens.get(i));
-        }
+
     }
 
-    public ArrayList<Examen> getSuccesfullExamens(){
-        for (int i = 0; i >= examList.size();i++){
-            if (examList.get(i).getResult() == true){
-                succesfullExamens.add(examList.get(i));
-            }
-        }
-        return succesfullExamens;
-    }
 }

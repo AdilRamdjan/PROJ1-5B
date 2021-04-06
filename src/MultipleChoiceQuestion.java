@@ -31,6 +31,6 @@ class MultipleChoiceQuestion extends Question {
     }
 
     public String displayCorrectAnswer() {
-        return "Het goede antwoord was: " + getAnswerIndex()+1 + ".";
+        return "Het goede antwoord was: " + (getAnswerIndex()+1) + ".";
     }
 }

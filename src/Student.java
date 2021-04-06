@@ -1,21 +1,29 @@
+import java.util.ArrayList;
 import java.util.regex.Pattern;
 
 class Student{
     private Integer studentNumber;
-    private String naam;
-    Student hasResults;
+    private String name;
+    private ArrayList<Result> hasResults;
 
-    public void Student(Integer studentNummer){
-        this.studentNumber = studentNummer;
 
+
+    public Student(Integer studentNumber, String name){
+        hasResults = new ArrayList<Result>();
+        this.studentNumber = studentNumber;
+        this.name = name;
+    }
+
+    public boolean addResult(Result result){
+        return hasResults.add(result);
     }
     public Integer getStudentNumber(){
         return studentNumber;
     }
     public String getName(){
-        return naam;
+        return name;
     }
-    public boolean validateStudentNumber(String studentNumber) {
-        return (Pattern.matches("[1-9][0-9]{7}",studentNumber));
+    public boolean validateStudentNumber() {
+        return (Pattern.matches("[1-9][0-9]{7}", studentNumber.toString()));
     }
 }

@@ -6,6 +6,13 @@ public class menuStudent extends Menu {
     public menuStudent(ArrayList<Student> student) {
         hasStudents = student;
     }
+    public menuStudent(){
+        hasStudents = new ArrayList<Student>();
+    }
+    public void DisplayMenu() {
+
+    }
+
 
     public boolean addUniqueStudent(Student student){
         int count = 0;
@@ -23,6 +30,17 @@ public class menuStudent extends Menu {
 
     public ArrayList<Student> getStudents(){
         return hasStudents;
+    }
+
+    public Student getStudentByNumber(Integer studentNumber){
+        Student resultStudent = null;
+        for (Student student : hasStudents){
+            if(student.getStudentNumber().equals(studentNumber)){
+                resultStudent = student;
+                break;
+            }
+        }
+        return resultStudent;
     }
 
     public String displayStudents(){
