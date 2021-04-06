@@ -1,31 +1,19 @@
 import java.util.ArrayList;
 
 class Examen {
-    private String examName;
-    private ArrayList<Question> questionList;
+    private String name;
+    private ArrayList<Question> hasQuestions;
 
-    public Examen(String examName, ArrayList<Question> questionList) {
-        this.questionList = questionList;
-        this.examName = examName;
+    public Examen(String name, ArrayList<Question> hasQuestions) {
+        this.hasQuestions = hasQuestions;
+        this.name = name;
 
     }
-    public Examen(){
-        questionList = new ArrayList<Question>();
+    public String getName() {
+        return name;
     }
-
-    public String getExamenNaam() {
-
-        return examName;
-    }
-
-
     public ArrayList<Question> getQuestions() {
-        return questionList;
+        return hasQuestions;
     }
 
-    public void addQuestions(Question[] question) {
-        for (int i = 0; i <= question.length; i++) {
-            this.questionList.add(question[i]);
-        }
-    }
 }
