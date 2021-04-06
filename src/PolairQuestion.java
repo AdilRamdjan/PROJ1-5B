@@ -9,8 +9,8 @@ class PolairQuestion extends Question{
 
     public String displayQuestion() {
         return getQuestion() + "?\n" +
-                "1: Ja\n" +
-                "2: Nee\n";
+                "1: True\n" +
+                "2: False\n";
     }
 
     public boolean validateInput(String input) {
@@ -18,8 +18,8 @@ class PolairQuestion extends Question{
     }
 
     public String displayCorrectAnswer() {
-        String answer = (this.answer) ? "Ja" : "Nee";
-        return "Het goede antwoord was: " +  answer;
+        String answer = (this.answer) ? "True" : "False";
+        return "The right answer was: " +  answer;
     }
 
     public boolean doQuestion(Integer input) {

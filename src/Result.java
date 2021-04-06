@@ -2,21 +2,30 @@ import java.util.ArrayList;
 
 class Result{
     private Student hasStudent;
-    private ArrayList<ResultQuestion> hasResultQuestion;
+    private ArrayList<ResultQuestion> hasresultquestion;
+    private Examen hasExam;
 
-    public Result(Student hasStudent, ArrayList<ResultQuestion> hasResultQuestion) {
+    public Result(Student hasStudent, ArrayList<ResultQuestion> hasresultquestion, Examen examen) {
+        this.hasExam = examen;
         this.hasStudent = hasStudent;
-        this.hasResultQuestion = hasResultQuestion;
+        this.hasresultquestion = hasresultquestion;
+    }
+
+
+    public Examen getExam(){
+        return hasExam;
     }
 
     public Boolean getResult(){
         int correct = 0;
-        for (ResultQuestion resultQuestion: hasResultQuestion) {
+        for (ResultQuestion resultQuestion: hasresultquestion) {
             if (resultQuestion.getResult()) {
                 correct++;
             }
         }
-        return (correct >= Math.round(hasResultQuestion.size() / 2));
+        int avgQuestions = Math.round(hasresultquestion.size() / 2);
+        return (correct >= (avgQuestions == 0?1:avgQuestions) );
+
     }
 
     public Student getHasStudent() {
@@ -24,6 +33,6 @@ class Result{
     }
 
     public ArrayList<ResultQuestion> getHasResultQuestion() {
-        return hasResultQuestion;
+        return hasresultquestion;
     }
 }
