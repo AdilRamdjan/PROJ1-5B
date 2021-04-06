@@ -59,7 +59,7 @@ class Main {
 
                 Student student = new Student(studentNumber, name);
                 if(student.validateStudentNumber() && menuStudent.addUniqueStudent(student)){
-                    System.out.println("Student added succesfully!");
+                    System.out.println("Student added successfully!");
                 }else{
                     System.out.println("Either user already exists or studentnumber is invalid.");
                 }
@@ -76,7 +76,7 @@ class Main {
                 int index = scanner.nextInt();
                 if(index != 0) {
                     if(menuStudent.deleteStudentExisting(studentArrayList.get(index - 1))) {
-                        System.out.println("Student deleted succesfully");
+                        System.out.println("Student deleted successfully");
                     }else{
                         System.out.println("Action failed.");
                     }
@@ -183,7 +183,7 @@ class Main {
                     System.out.println("No exams have been taken");
                 }
                 else if(mostSuccesfullStudents.size() == 0){
-                    System.out.println("Most succesfull student:");
+                    System.out.println("Most successful student:");
                     System.out.println(mostSuccesfullStudent.getName() + " " + mostSuccesfullStudent.getStudentNumber());
                 }
                 else{
@@ -191,7 +191,7 @@ class Main {
                     for (Student student : mostSuccesfullStudents){
                         result += student.getName() + " " + student.getStudentNumber() + "\n";
                     }
-                    System.out.println("Most succesfull Students:");
+                    System.out.println("Most successful Students:");
                     System.out.println(result);
                 }
 
@@ -207,8 +207,8 @@ class Main {
 
 
                 while(questionChoice != 0) {
-                    System.out.println("Do you want to add a polair question or a multiple choice question?");
-                    System.out.println("0) Stop adding questions\n" +"1) polair\n" + "2) multiple choice" );
+                    System.out.println("Do you want to add a polar question or a multiple choice question?");
+                    System.out.println("0) Stop adding questions\n" +"1) polar\n" + "2) multiple choice" );
                     questionChoice = scanner.nextInt();
 
                     //polairQuestion
@@ -224,12 +224,12 @@ class Main {
 
                             PolairQuestion polairQuestion1 = new PolairQuestion(q1, trueOrFalse);
                             if(questionArrayList.add(polairQuestion1)){
-                                System.out.println("Question added succesfully");
+                                System.out.println("Question added successfully");
 
                             }else{
                                 System.out.println("Something went wrong");
                             }
-                            System.out.println("Do you want to add another polair question?\n" + "1) Yes\n" + "2) No");
+                            System.out.println("Do you want to add another polar question?\n" + "1) Yes\n" + "2) No");
 
                             i = scanner.nextInt();
 
@@ -260,7 +260,7 @@ class Main {
 
                             MultipleChoiceQuestion mcQuestion = new MultipleChoiceQuestion(q1,choiceList,chosenAnswer);
                             if(questionArrayList.add(mcQuestion)){
-                                System.out.println("Question added succesfully");
+                                System.out.println("Question added successfully");
 
                             }else {
                                 System.out.println("Something went wrong");
@@ -275,7 +275,7 @@ class Main {
 
                 Examen exam = new Examen(examName, questionArrayList);
                 menuExamen.addExam(exam);
-                System.out.println("Exam saved succesfully");
+                System.out.println("Exam saved successfully");
             }
 
             //EXIT
