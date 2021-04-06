@@ -7,7 +7,7 @@ class MenuExamen extends Menu{
     }
 
     public String DisplayMenu() {
-        return "1) Examens weergeven\n" + "2) Nieuw examen\n";
+        return "1) View exams\n" + "2) Create new exam\n";
     }
 
     public ArrayList<Examen> getExamens(){

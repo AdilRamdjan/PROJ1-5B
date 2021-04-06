@@ -7,8 +7,8 @@ class ResultTest{
     @Test
     void getResult() {
         Student frenk = new Student(19928781, "naam");
-        PolairQuestion rijvraag = new PolairQuestion("is nederland kleiner dan australie?", true);
-        PolairQuestion algemeenvraag = new PolairQuestion("Is amerika groter dan nederland?", true);
+        PolairQuestion rijvraag = new PolairQuestion("is Nederland kleiner dan Australië?", true);
+        PolairQuestion algemeenvraag = new PolairQuestion("Is Amerika groter dan Nederland?", true);
         int userInput = 0;
         ResultQuestion voldoende = new ResultQuestion(userInput, rijvraag);
         ResultQuestion voldoende1 = new ResultQuestion(userInput, algemeenvraag);
@@ -52,8 +52,8 @@ class menuResultTest{
     @Test
     void getPassedExams(){
         Student frenk = new Student(19928781, "naam");
-        PolairQuestion rijvraag = new PolairQuestion("is nederland kleiner dan australie?", true);
-        PolairQuestion algemeenvraag = new PolairQuestion("Is amerika groter dan nederland?", true);
+        PolairQuestion rijvraag = new PolairQuestion("is Nederland kleiner dan Australië?", true);
+        PolairQuestion algemeenvraag = new PolairQuestion("Is Amerika groter dan Nederland?", true);
         int userInput = 1;
         ResultQuestion voldoende = new ResultQuestion(userInput, rijvraag);
         ResultQuestion voldoende1 = new ResultQuestion(userInput, algemeenvraag);
