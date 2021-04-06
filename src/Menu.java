@@ -1,6 +1,7 @@
 
 abstract class Menu {
-    public abstract void DisplayMenu();
+    public abstract String DisplayMenu();
+
 }
 
 

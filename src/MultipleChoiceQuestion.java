@@ -1,7 +1,7 @@
 import java.util.regex.Pattern;
 
 class MultipleChoiceQuestion extends Question {
-    private int answerIndex;
+    private Integer answerIndex;
     private String[] choices;
 
     public MultipleChoiceQuestion(String question, String[] choices, Integer answer){
@@ -10,7 +10,7 @@ class MultipleChoiceQuestion extends Question {
         this.answerIndex = answer;
     }
 
-    public int getAnswerIndex(){
+    public Integer getAnswerIndex(){
         return this.answerIndex;
     }
 

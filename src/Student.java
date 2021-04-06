@@ -6,8 +6,6 @@ class Student{
     private String name;
     private ArrayList<Result> hasResults;
 
-
-
     public Student(Integer studentNumber, String name){
         hasResults = new ArrayList<Result>();
         this.studentNumber = studentNumber;

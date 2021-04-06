@@ -116,7 +116,7 @@ class Main {
                             Integer answer = Integer.valueOf(scanner.nextInt());
                             validateAnswer = currentQuestion.validateInput(Integer.toString(answer));
                             if(validateAnswer){
-
+                                answer -= 1;
                                 if (!currentQuestion.doQuestion(answer)) {
                                     System.out.println(currentQuestion.displayCorrectAnswer());
                                 } else {
@@ -155,7 +155,7 @@ class Main {
                 }
                 String result = "";
                 for (Examen examen : menuResult.getPassedExams(student)){
-                    result += examen.getExamenNaam() + "\n";
+                    result += examen.getName() + "\n";
                 }
                 System.out.println(result);
             }

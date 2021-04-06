@@ -2,20 +2,18 @@
 import java.util.ArrayList;
 
 class MenuResult extends Menu {
-    private ArrayList<Result> resultList;
+    private ArrayList<Result> hasResults;
 
-    public MenuResult(ArrayList<Result> results) {
-        this.resultList = results;
-    }
+
     public MenuResult(){
-        this.resultList = new ArrayList<Result>();
+        this.hasResults = new ArrayList<Result>();
     }
 
 
 
     public ArrayList<Examen> getPassedExams(Student student){
         ArrayList<Examen> passedExamList = new ArrayList<Examen>();
-        for (Result result : resultList){
+        for (Result result : hasResults){
             if (student.getStudentNumber().equals(result.getHasStudent().getStudentNumber())){
                 if (result.getResult()){
                     passedExamList.add(result.getExam());
@@ -26,11 +24,11 @@ class MenuResult extends Menu {
     }
 
     public boolean addResult(Result result){
-        return resultList.add(result);
+        return hasResults.add(result);
     }
 
-    public void DisplayMenu() {
-
+    public String DisplayMenu() {
+        return "";
     }
 
 }

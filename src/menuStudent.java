@@ -3,14 +3,11 @@ import java.util.ArrayList;
 public class menuStudent extends Menu {
     private ArrayList<Student> hasStudents;
 
-    public menuStudent(ArrayList<Student> student) {
-        hasStudents = student;
-    }
     public menuStudent(){
         hasStudents = new ArrayList<Student>();
     }
-    public void DisplayMenu() {
-
+    public String DisplayMenu() {
+        return "";
     }
 
 

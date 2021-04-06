@@ -1,37 +1,31 @@
 import java.util.ArrayList;
 
 class MenuExamen extends Menu{
-    private ArrayList<Examen> examList;
+    private ArrayList<Examen> hasExams;
     public MenuExamen() {
-        examList = new ArrayList<Examen>();
+        hasExams = new ArrayList<Examen>();
     }
 
-    public void DisplayMenu() {
-        System.out.println("1) Examens weergeven\n" + "2) Nieuw examen\n");
+    public String DisplayMenu() {
+        return "1) Examens weergeven\n" + "2) Nieuw examen\n";
     }
+
     public ArrayList<Examen> getExamens(){
-        return examList;
+        return hasExams;
     }
+
     public String displayExams(){
         int i = 1;
         String examens = "";
-        for (Examen examen : examList){
-            examens += i + ") " + examen.getExamenNaam() + "\n";
+        for (Examen examen : hasExams){
+            examens += i + ") " + examen.getName() + "\n";
             i++;
         }
         return examens;
     }
     public boolean addExam(Examen examen){
-        if(examList.add(examen)){
+        if(hasExams.add(examen)){
             return true;
         }else{return false;}
     }
-
-
-
-   //public boolean makeExam(String examName, Question[] questions){
-   //     Examen exam = new Examen(examName);
-   //     exam.addQuestions(questions);
-   //     return examList.add(exam);
-   // }
 }
